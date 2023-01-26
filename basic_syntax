@@ -1,0 +1,41 @@
+Start Line
+-----
+create a file run.sh
+
+#!/bin/bash
+echo "Test"
+
+Run 
+---
+$./run.sh
+output: Test
+Note: chmod 777 to file (make executable the script file)
+
+Parameters
+-----
+$1 $2  are used
+ie:
+$./test.sh sandy hero
+$1 = sandy
+$2 = hero
+
+In looo
+use "$@"
+
+$./test.sh ram shaym mohan gita sita
+i=1;
+for user in "$@"
+do
+  echo "user $i : $user";
+  i=$((i+1))
+done
+
+
+Redirection
+------
+0 = input
+1= output
+2= error
+
+$cmd >> /dev/null 2>&1. //means do not show or store output even in error 
+Here, /dev/null is file that discards all you write here, but say write is ok
